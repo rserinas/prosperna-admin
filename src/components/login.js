@@ -5,10 +5,15 @@ import './styles/login.css';
 export default class login extends React.Component {
   constructor() {
     super();
-    this.state = {};
+    this.state = {
+      btnName: 'Submit'
+    };
   }
-  handleSubmitBtn () {
-
+  
+  handleSubmitBtn = () => {
+    this.setState({
+      btnName: 'Submitting...'
+    });
   }
   render() {
     return (
@@ -23,7 +28,7 @@ export default class login extends React.Component {
                   <input type="text" id="username" className="form-control"/>
                   <label>Password</label>
                   <input type="password" id="password" className="form-control"/>
-                  <button className="btn btn-success login-submit-btn" onClick={this.handleSubmitBtn}>Submit</button>
+                  <button className="btn btn-success login-submit-btn" onClick={this.handleSubmitBtn}>{this.state.btnName}</button>
                 </div>
               </div>
             </div>
