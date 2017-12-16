@@ -9,7 +9,7 @@ export default class login extends React.Component {
       btnName: 'Submit'
     };
   }
-  
+
   handleSubmitBtn = () => {
     this.setState({
       btnName: 'Submitting...'
@@ -19,10 +19,10 @@ export default class login extends React.Component {
     return (
       <div className="container">
           <div className="row">
-            <div className="col-md-3"></div>
-            <div className="col-md-6">
+            <div className="col s3"></div>
+            <div className="col s6">
               <div className="card login-wrapper">
-                <div className="card-body">
+                <div className="card-content">
                   <h2>Welcome to Prosperna Admin</h2>
                   <label>Username</label>
                   <input type="text" id="username" className="form-control"/>
@@ -32,7 +32,7 @@ export default class login extends React.Component {
                 </div>
               </div>
             </div>
-            <div className="col-md-3"></div>
+            <div className="col s3"></div>
           </div>
       </div>
     );
